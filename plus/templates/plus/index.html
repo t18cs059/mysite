@@ -4,9 +4,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<title>djangoの始め方</title>
+<title>計算アプリ</title>
 </head>
 <body>
-<h1 class="title">djangoの始め方</h1>
+<form action="" method="POST">
+  <table>
+    {{ form.as_table }}
+  </table>
+  {% csrf_token %}
+  <button type="submit">計算</button>
+</form>
+{% if ans != "" %}
+  {{ ans }} </br>
+{% endif %}
 </body>
 </html>
